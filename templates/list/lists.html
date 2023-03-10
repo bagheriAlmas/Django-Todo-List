@@ -1,6 +1,8 @@
 <ul>
     {% for list in todolist %}
-        <li>{{ list.title }}</li>
+        <li>
+        <a href="{% url 'list_items' list.id %}">{{ list.title }}</a>
+        </li>
     {% endfor %}
 
 </ul>
